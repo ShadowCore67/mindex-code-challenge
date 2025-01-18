@@ -28,7 +28,7 @@ public class CompensationServiceImpl implements CompensationService {
         //This logic has some grey area due to the openess of the task. I've designed it to allow for future effective dates,
         //and then added checking to prevent from adding effective dates that come before the most recent as well as
         //preventing dates being set in the past. A lot of this logic could change based on customer requirements,
-        //they may not need future dates, or would need the ability to delete future dates
+        //they may not need future dates, or would need the ability to delete future dates, or update existing ones.
         if(compensation.getEffectiveDate() == null) {
             compensation.setEffectiveDate(LocalDate.now());
         }
