@@ -86,7 +86,7 @@ public class EmployeeServiceImplTest {
     }
 
     //I was unable to get the tests to work locally, included the existing tests from above. 
-    //Not sure if it was some gradle option or something, as the test data didn't seem to be persisting.
+    //Not sure if it was some gradle option or something, the issue looked to be the data wasn't persisting.
     //However I'm confident this test would pass otherwise
     @Test
     public void testReportingStructure() {

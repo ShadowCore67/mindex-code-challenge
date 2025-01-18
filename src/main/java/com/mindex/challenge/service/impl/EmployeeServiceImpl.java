@@ -33,7 +33,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee read(String id) {
-        LOG.debug("Creating employee with id [{}]", id);
+        LOG.debug("Reading employee with id [{}]", id);
 
         Employee employee = employeeRepository.findByEmployeeId(id);
 
@@ -61,6 +61,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     // to demonstrate what I mean.
     @Override
     public ReportingStructure getReportingStructure(String id) {
+        LOG.debug("Retrieving report structure for employee [{}]", id);
         Employee employee = read(id);
 
         ReportingStructure reportStructure = new ReportingStructure();
@@ -85,6 +86,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee getEmployeeReportStructure(String id) {
+        LOG.debug("Retrieving report structure for employee [{}]", id);
         Employee employee = read(id);
         int numberOfReports = 0;
         List<Employee> fullReports = new ArrayList<>();
