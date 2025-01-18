@@ -8,6 +8,7 @@ public class Employee {
     private String lastName;
     private String position;
     private String department;
+    private int totalReports;
     private List<Employee> directReports;
 
     public Employee() {
@@ -51,6 +52,14 @@ public class Employee {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public int getTotalReports() {
+        return totalReports;
+    }
+
+    public void setTotalReports(int totalReports) {
+        this.totalReports = totalReports;
     }
 
     public List<Employee> getDirectReports() {
